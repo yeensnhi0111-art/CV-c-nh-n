@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Cá Nhân - Nguyễn Huỳnh Yến Nhi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #fdeef2 0%, #e8f4fc 55%, #fff9e6 100%);
+      color: #4a4a4a;
+      display: flex;
+      justify-content: center;
+      padding: 35px 15px;
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+
+    .cv-container {
+      width: 100%;
+      max-width: 920px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(168, 92, 118, 0.14);
+      display: flex;
+      overflow: hidden;
+      border: 1px solid #f5dbe3;
+    }
+
+    /* CỘT BÊN TRÁI - HỒNG PASTEL CHỦ ĐẠO + XANH DƯƠNG & VÀNG PASTEL */
+    .left-column {
+      width: 34%;
+      background-color: #f9d8e1;
+      padding: 35px 26px;
+      color: #553f46;
+      border-right: 2px solid #dceefb;
+    }
+
+    .avatar-box {
+      width: 118px;
+      height: 118px;
+      border-radius: 12px; /* Khung vuông bo góc nhẹ; đổi thành 0 nếu muốn góc vuông sắc cạnh */
+      overflow: hidden;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(108, 166, 205, 0.28);
+      margin-bottom: 26px;
+      background-color: #e3f2fd;
+    }
+
+    .avatar-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .left-section {
+      margin-bottom: 24px;
+    }
+
+    .left-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #a84863;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #fff3c4;
+    }
+
+    .intro-text {
+      font-size: 12.8px;
+      font-weight: 500;
+      text-align: justify;
+      color: #553f46;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 12.8px;
+      font-weight: 500;
+    }
+
+    .contact-list li {
+      margin-bottom: 9px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      word-break: break-word;
+    }
+
+    .contact-icon {
+      color: #3b7ea1;
+      background-color: #e6f3fc;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .skill-item {
+      font-size: 12.8px;
+      padding: 6px 0;
+      border-bottom: 1.5px solid #e7b5c3;
+      color: #4d3b40;
+      font-weight: 600;
+    }
+
+    .hobby-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      background-color: #e6f3fc;
+      color: #366f8e;
+      border: 1px solid #c5e2f5;
+      font-size: 11.8px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(54, 111, 142, 0.08);
+    }
+
+    .tag.yellow-tag {
+      background-color: #fff6d1;
+      color: #8a6514;
+      border-color: #f5e198;
+    }
+
+    /* CỘT BÊN PHẢI */
+    .right-column {
+      width: 66%;
+      padding: 40px 38px;
+      background-color: #ffffff;
+    }
+
+    .header-name {
+      font-size: 27px;
+      font-weight: 700;
+      color: #b54d69;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .header-subtitle {
+      font-size: 12px;
+      font-weight: 700;
+      color: #4a82a1;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #fde3ea;
+      margin-bottom: 24px;
+    }
+
+    .right-section {
+      margin-bottom: 24px;
+    }
+
+    .right-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #b54d69;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .right-title-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background-color: #fff6d1;
+      border: 1px solid #f4df92;
+      color: #b54d69;
+      border-radius: 5px;
+      font-size: 11.5px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 16px;
+      border-left: 2.5px solid #f4c6d3;
+      margin-bottom: 16px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #fce8ee;
+      color: #b54d69;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 10px;
+      margin-bottom: 5px;
+    }
+
+    .badge.blue-badge {
+      background-color: #e6f3fc;
+      color: #366f8e;
+    }
+
+    .badge.yellow-badge {
+      background-color: #fff6d1;
+      color: #8a6514;
+    }
+
+    .item-heading {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333333;
+    }
+
+    .item-sub {
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 500;
+      color: #7a8b99;
+      margin-bottom: 4px;
+    }
+
+    .item-desc {
+      font-size: 12.8px;
+      font-weight: 500;
+      color: #555555;
+    }
+
+    /* Tương thích màn hình điện thoại */
+    @media (max-width: 720px) {
+      .cv-container {
+        flex-direction: column;
+      }
+      .left-column, .right-column {
+        width: 100%;
+        border-right: none;
+      }
+      .left-column {
+        border-bottom: 2px solid #dceefb;
+      }
+      .avatar-box {
+        margin: 0 auto 20px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-container">
+    <!-- CỘT TRÁI -->
+    <aside class="left-column">
+      <div class="avatar-box">
+        <!-- Đặt tên file ảnh đại diện là avatar.jpg và để cùng cấp với index.html -->
+        <img src="avatar.jpg" alt="Ảnh đại diện Nguyễn Huỳnh Yến Nhi">
+      </div>
+
+      <div class="left-section">
+        <h2 class="left-title">Giới thiệu</h2>
+        <p class="intro-text">
+          Xin chào! Mình là Nguyễn Huỳnh Yến Nhi, hiện đang là sinh viên ngành Công nghệ Thông tin tại Trường Đại học Sư phạm TP. Hồ Chí Minh. Mình yêu thích chụp ảnh, nghe nhạc và không ngừng trau dồi tư duy logic, lập trình cũng như kỹ năng làm việc nhóm.
+        </p>
+      </div>
+
+      <div class="left-section">
+        <h2 class="left-title">Liên hệ</h2>
+        <ul class="contact-list">
+          <li><span class="contact-icon">📞</span> 0375 361 308</li>
+          <li><span class="contact-icon">✉️</span> yeensnhi0111@gmail.com</li>
+          <li><span class="contact-icon">📍</span> Xã Tân Vĩnh Lộc, Huyện Bình Chánh, TP. Hồ Chí Minh, Việt Nam</li>
+        </ul>
+      </div>
+
+      <div class="left-section">
+        <h2 class="left-title">Kỹ năng</h2>
+        <div class="skill-item">Microsoft Office (Word, Excel, PowerPoint)</div>
+        <div class="skill-item">C++ &amp; Tư duy giải thuật cơ bản</div>
+        <div class="skill-item">Nghiên cứu tài liệu &amp; Tự học</div>
+        <div class="skill-item">HTML &amp; CSS cơ bản</div>
+      </div>
+
+      <div class="left-section">
+        <h2 class="left-title">Sở thích</h2>
+        <div class="hobby-tags">
+          <span class="tag">📷 Chụp ảnh</span>
+          <span class="tag yellow-tag">🎧 Nghe nhạc</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CỘT PHẢI -->
+    <main class="right-column">
+      <header>
+        <h1 class="header-name">Nguyễn Huỳnh Yến Nhi</h1>
+        <p class="header-subtitle">Sinh viên Công nghệ Thông tin</p>
+      </header>
+
+      <section class="right-section">
+        <h2 class="right-title"><span class="right-title-icon">🎓</span> Học vấn</h2>
+        <div class="timeline-item">
+          <span class="badge">2026 - Hiện tại</span>
+          <h3 class="item-heading">Trường Đại học Sư phạm TP. Hồ Chí Minh (HCMUE)</h3>
+          <p class="item-sub">Sinh viên ngành Công nghệ Thông tin</p>
+          <p class="item-desc">Học tập và rèn luyện kiến thức nền tảng về lập trình cơ bản và nâng cao, thiết kế web và ứng dụng công nghệ số.</p>
+        </div>
+      </section>
+
+      <section class="right-section">
+        <h2 class="right-title"><span class="right-title-icon">📁</span> Dự án cá nhân</h2>
+        
+        <div class="timeline-item">
+          <span class="badge">2026</span>
+          <h3 class="item-heading">Bài thiết kế Web cuối kỳ môn Thiết kế Web</h3>
+          <p class="item-sub">Giảng viên hướng dẫn: Thầy Lương Trần Hy Hiến</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="badge blue-badge">2026</span>
+          <h3 class="item-heading">Thiết kế Website Hồ Cá</h3>
+          <p class="item-sub">Bài tập cá nhân - Môn Thiết kế Web</p>
+        </div>
+
+        <div class="timeline-item">
+          <span class="badge yellow-badge">2026</span>
+          <h3 class="item-heading">Thiết kế Website Cá Nhân (CV Online)</h3>
+          <p class="item-sub">Bài tập cá nhân - Môn Thiết kế Web</p>
+        </section>
+
+      <section class="right-section">
+        <h2 class="right-title"><span class="right-title-icon">💼</span> Kinh nghiệm &amp; Kỹ năng thực hành</h2>
+        
+        <div class="timeline-item">
+          <span class="badge blue-badge">Lập trình &amp; Giải thuật</span>
+          <h3 class="item-heading">Thực hành giải bài tập lập trình C++</h3>
+          </div>
+
+        <div class="timeline-item">
+          <span class="badge yellow-badge">Tổ chức &amp; Trình bày</span>
+          <h3 class="item-heading">Soạn thảo nội dung, thuyết trình &amp; Tin học văn phòng</h3>
+          <p class="item-desc">Chủ động tổng hợp tài liệu, xây dựng dàn ý trình bày rõ ràng, mạch lạc; sử dụng Word, PowerPoint và Excel phục vụ học tập và làm việc nhóm.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
