@@ -13,8 +13,28 @@
       margin: 0;
       padding: 0;
       font-family: 'Quicksand', sans-serif;
-        .cv-container {
-      position: relative; /* Bắt buộc có để định vị bông hoa theo khung CV */
+    }
+
+    body {
+      background: linear-gradient(135deg, #fdeef2 0%, #e8f4fc 55%, #fff9e6 100%);
+      color: #4a4a4a;
+      display: flex;
+      justify-content: center;
+      padding: 35px 15px;
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+
+    .cv-container {
+      position: relative;
+      width: 100%;
+      max-width: 920px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(168, 92, 118, 0.14);
+      display: flex;
+      overflow: hidden;
+      border: 1px solid #f5dbe3;
     }
 
     .flower-decor {
@@ -40,28 +60,6 @@
       transform: rotate(-15deg);
     }
 
-
-    body {
-      background: linear-gradient(135deg, #fdeef2 0%, #e8f4fc 55%, #fff9e6 100%);
-      color: #4a4a4a;
-      display: flex;
-      justify-content: center;
-      padding: 35px 15px;
-      line-height: 1.55;
-      min-height: 100vh;
-    }
-
-    .cv-container {
-      width: 100%;
-      max-width: 920px;
-      background-color: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 10px 28px rgba(168, 92, 118, 0.14);
-      display: flex;
-      overflow: hidden;
-      border: 1px solid #f5dbe3;
-    }
-
     /* CỘT BÊN TRÁI - HỒNG PASTEL CHỦ ĐẠO + XANH DƯƠNG & VÀNG PASTEL */
     .left-column {
       width: 34%;
@@ -74,7 +72,7 @@
     .avatar-box {
       width: 118px;
       height: 118px;
-      border-radius: 12px; /* Khung vuông bo góc nhẹ; đổi thành 0 nếu muốn góc vuông sắc cạnh */
+      border-radius: 12px;
       overflow: hidden;
       border: 4px solid #ffffff;
       box-shadow: 0 4px 12px rgba(108, 166, 205, 0.28);
@@ -298,11 +296,30 @@
 <body>
 
   <div class="cv-container">
+    <!-- Bông hoa vàng pastel góc trên bên phải -->
+    <svg class="flower-decor flower-top-right" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="22" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="77" cy="41" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="67" cy="73" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="33" cy="73" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="23" cy="41" r="18" fill="#fff3c4" stroke="#f0d57d" stroke-width="2"/>
+      <circle cx="50" cy="50" r="14" fill="#f7b2c4"/>
+    </svg>
+
+    <!-- Bông hoa xanh dương pastel góc dưới bên trái -->
+    <svg class="flower-decor flower-bottom-left" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="22" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="77" cy="41" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="67" cy="73" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="33" cy="73" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="23" cy="41" r="18" fill="#e1f2fc" stroke="#b9def5" stroke-width="2"/>
+      <circle cx="50" cy="50" r="13" fill="#fff3c4"/>
+    </svg>
+
     <!-- CỘT TRÁI -->
     <aside class="left-column">
       <div class="avatar-box">
-        <!-- Đặt tên file ảnh đại diện là avatar.jpg và để cùng cấp với index.html -->
-        <img src="avatar.jpeg" alt="Ảnh đại diện Nguyễn Huỳnh Yến Nhi">
+        <img src="IMG_3060.jpeg" alt="Ảnh đại diện Nguyễn Huỳnh Yến Nhi">
       </div>
 
       <div class="left-section">
@@ -374,7 +391,8 @@
           <span class="badge yellow-badge">2026</span>
           <h3 class="item-heading">Thiết kế Website Cá Nhân (CV Online)</h3>
           <p class="item-sub">Bài tập cá nhân - Môn Thiết kế Web</p>
-        </section>
+        </div>
+      </section>
 
       <section class="right-section">
         <h2 class="right-title"><span class="right-title-icon">💼</span> Kinh nghiệm &amp; Kỹ năng thực hành</h2>
@@ -382,7 +400,7 @@
         <div class="timeline-item">
           <span class="badge blue-badge">Lập trình &amp; Giải thuật</span>
           <h3 class="item-heading">Thực hành giải bài tập lập trình C++</h3>
-          </div>
+        </div>
 
         <div class="timeline-item">
           <span class="badge yellow-badge">Tổ chức &amp; Trình bày</span>
